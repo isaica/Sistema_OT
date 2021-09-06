@@ -1,0 +1,29 @@
+I:\Mundo .Net\Nova_temporada\Osland_systems\Gestao_OT\bin\Debug\Gestao_OT.exe.config
+I:\Mundo .Net\Nova_temporada\Osland_systems\Gestao_OT\bin\Debug\Gestao_OT.exe
+I:\Mundo .Net\Nova_temporada\Osland_systems\Gestao_OT\bin\Debug\Gestao_OT.pdb
+I:\Mundo .Net\Nova_temporada\Osland_systems\Gestao_OT\obj\Debug\Gestao_OT.csprojAssemblyReference.cache
+I:\Mundo .Net\Nova_temporada\Osland_systems\Gestao_OT\obj\Debug\Gestao_OT.frmAdmin.resources
+I:\Mundo .Net\Nova_temporada\Osland_systems\Gestao_OT\obj\Debug\Gestao_OT.Properties.Resources.resources
+I:\Mundo .Net\Nova_temporada\Osland_systems\Gestao_OT\obj\Debug\Gestao_OT.csproj.GenerateResource.cache
+I:\Mundo .Net\Nova_temporada\Osland_systems\Gestao_OT\obj\Debug\Gestao_OT.csproj.CoreCompileInputs.cache
+I:\Mundo .Net\Nova_temporada\Osland_systems\Gestao_OT\obj\Debug\Gestao_OT.exe
+I:\Mundo .Net\Nova_temporada\Osland_systems\Gestao_OT\obj\Debug\Gestao_OT.pdb
+I:\Mundo .Net\Nova_temporada\Osland_systems\Gestao_OT\obj\Debug\Gestao_OT.UIFormularios.FrmUsers.resources
+I:\Mundo .Net\Nova_temporada\Osland_systems\Gestao_OT\obj\Debug\Gestao_OT.UIFormularios.frmLogin.resources
+I:\Mundo .Net\Nova_temporada\Osland_systems\Gestao_OT\obj\Debug\Gestao_OT.UIFormularios.frmUserDashboard.resources
+I:\Git_v2\Osland_systems\Gestao_OT\bin\Debug\Gestao_OT.exe.config
+I:\Git_v2\Osland_systems\Gestao_OT\bin\Debug\Gestao_OT.exe
+I:\Git_v2\Osland_systems\Gestao_OT\bin\Debug\Gestao_OT.pdb
+I:\Git_v2\Osland_systems\Gestao_OT\obj\Debug\Gestao_OT.csprojAssemblyReference.cache
+I:\Git_v2\Osland_systems\Gestao_OT\obj\Debug\Gestao_OT.frmAdmin.resources
+I:\Git_v2\Osland_systems\Gestao_OT\obj\Debug\Gestao_OT.Properties.Resources.resources
+I:\Git_v2\Osland_systems\Gestao_OT\obj\Debug\Gestao_OT.UIFormularios.frmLogin.resources
+I:\Git_v2\Osland_systems\Gestao_OT\obj\Debug\Gestao_OT.UIFormularios.frmUserDashboard.resources
+I:\Git_v2\Osland_systems\Gestao_OT\obj\Debug\Gestao_OT.UIFormularios.FrmUsers.resources
+I:\Git_v2\Osland_systems\Gestao_OT\obj\Debug\Gestao_OT.csproj.GenerateResource.cache
+I:\Git_v2\Osland_systems\Gestao_OT\obj\Debug\Gestao_OT.csproj.CoreCompileInputs.cache
+I:\Git_v2\Osland_systems\Gestao_OT\obj\Debug\Gestao_OT.exe
+I:\Git_v2\Osland_systems\Gestao_OT\obj\Debug\Gestao_OT.pdb
+I:\Git_v2\Osland_systems\Gestao_OT\bin\Debug\System.Data.SqlClient.dll
+I:\Git_v2\Osland_systems\Gestao_OT\bin\Debug\System.Data.SqlClient.xml
+I:\Git_v2\Osland_systems\Gestao_OT\obj\Debug\Gestao_OT.csproj.CopyComplete
