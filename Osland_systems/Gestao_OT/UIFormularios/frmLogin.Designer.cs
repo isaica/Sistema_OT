@@ -106,7 +106,7 @@
             this.cbx_Tipo_De_Usuario.FormattingEnabled = true;
             this.cbx_Tipo_De_Usuario.Items.AddRange(new object[] {
             "Admin",
-            "Usuário"});
+            "Usuario"});
             this.cbx_Tipo_De_Usuario.Location = new System.Drawing.Point(73, 80);
             this.cbx_Tipo_De_Usuario.Name = "cbx_Tipo_De_Usuario";
             this.cbx_Tipo_De_Usuario.Size = new System.Drawing.Size(145, 26);
@@ -145,6 +145,7 @@
             this.button1.TabIndex = 0;
             this.button1.Text = "Entrar";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // frmLogin
             // 
