@@ -50,8 +50,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLLClasses\categoriaBLL.cs" />
     <Compile Include="BLLClasses\loginBLL.cs" />
     <Compile Include="BLLClasses\userBLL.cs" />
+    <Compile Include="DALdados\categoriaDAL.cs" />
     <Compile Include="DALdados\loginDAL.cs" />
     <Compile Include="DALdados\userDAL.cs" />
     <Compile Include="UIFormularios\frmAdmin.cs">
@@ -62,6 +64,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UIFormularios\frmCategorias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIFormularios\frmCategorias.Designer.cs">
+      <DependentUpon>frmCategorias.cs</DependentUpon>
+    </Compile>
     <Compile Include="UIFormularios\frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -92,6 +100,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UIFormularios\frmCategorias.resx">
+      <DependentUpon>frmCategorias.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UIFormularios\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>

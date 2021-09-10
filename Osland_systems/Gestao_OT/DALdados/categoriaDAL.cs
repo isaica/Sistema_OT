@@ -1,30 +1,33 @@
-﻿using Gestao_OT.BLLClasses;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Threading.Tasks;
+using Gestao_OT.BLLClasses;
 
 namespace Gestao_OT.DALdados
 {
-    class userDAL
+    class categoriaDAL
     {
-        //CoNEXAO com Banco de Dados
+        //Conexa com banco de dados
         static string myconnstring = ConfigurationManager.ConnectionStrings["connstring"].ConnectionString;
-        #region Selecionar dados do BD ou Consultar do BD
+
+        #region Exibir a categoria no DataView
         public DataTable Select()
         {
             SqlConnection conn = new SqlConnection(myconnstring);
             DataTable dt = new DataTable();
             try
             {
-                String sql = "SELECT * FROM tbl_user";
+                //Query p/ pegar dados do BD
+                String sql = "SELECT * FROM tbl_categories";
                 SqlCommand cmd = new SqlCommand(sql, conn);
                 SqlDataAdapter adapter = new SqlDataAdapter(cmd); //vai guradar os dados vindo da bd
+                //Adicionando valor do Adapater no DateTable
                 conn.Open(); //Abrir conexao
                 adapter.Fill(dt); //Preencher tds campos
             }
@@ -38,34 +41,21 @@ namespace Gestao_OT.DALdados
             }
             return dt;
         }
-
-        internal userBLL GetIDFromUsername(string loggedUser)
-        {
-            throw new NotImplementedException();
-        }
         #endregion
 
-        //Inserir dados no Banco de Dados
-        #region Inserir dados no BD
-        public bool Insert(userBLL u)
+        #region Cadastrar nova categoria
+        public bool Insert(categoriaBLL c)
         {
             bool isSuccess = false;
             SqlConnection conn = new SqlConnection(myconnstring);
             try
             {
-                String sql = "INSERT INTO tbl_user(first_name,last_name,email,username,password,contact,address,gender,user_type,added_date,added_by)VALUES(@first_name,@last_name,@email,@username,@password,@contact,@address,@gender,@user_type,@added_date,@added_by)";
+                String sql = "INSERT INTO tbl_categories(title,description,added_date,added_by)VALUES(@title,@description,@added_date,@added_by)";
                 SqlCommand cmd = new SqlCommand(sql, conn);
-                cmd.Parameters.AddWithValue("@first_name", u.first_name);
-                cmd.Parameters.AddWithValue("@last_name", u.last_name);
-                cmd.Parameters.AddWithValue("@email", u.email);
-                cmd.Parameters.AddWithValue("@username", u.username);
-                cmd.Parameters.AddWithValue("@password", u.password);
-                cmd.Parameters.AddWithValue("@contact", u.contact);
-                cmd.Parameters.AddWithValue("@address", u.address);
-                cmd.Parameters.AddWithValue("@gender", u.gender);
-                cmd.Parameters.AddWithValue("@user_type", u.user_type);
-                cmd.Parameters.AddWithValue("@added_date", u.added_date);
-                cmd.Parameters.AddWithValue("@added_by", u.added_by);
+                cmd.Parameters.AddWithValue("@title", c.title);
+                cmd.Parameters.AddWithValue("@description", c.description);
+                cmd.Parameters.AddWithValue("@added_date", c.added_date);
+                cmd.Parameters.AddWithValue("@added_by", c.added_by);
 
                 conn.Open();
                 int rows = cmd.ExecuteNonQuery();
@@ -90,28 +80,20 @@ namespace Gestao_OT.DALdados
         }
         #endregion
 
-        //Atualizar no Banco de Dados
-        #region Atualizar os dados do BD
-        public bool Update(userBLL u)
+        #region Atualizar categoria no BD
+        public bool Update(categoriaBLL c)
         {
             bool isSuccess = false;
             SqlConnection conn = new SqlConnection(myconnstring);
             try
             {
-                string sql = "UPDATE tbl_user SET first_name=@first_name,last_name=@last_name,email=@email,username=@username,password=@password,contact=@contact,address=@address,gender=@gender,user_type=@user_type,@added_date=@added_date,added_by=@added_by WHERE id=@id";
+                string sql = "UPDATE tbl_categories SET title=@title,descriptio=@descriptio,@added_date=@added_date,added_by=@added_by WHERE id=@id";
                 SqlCommand cmd = new SqlCommand(sql, conn);
-                cmd.Parameters.AddWithValue("@first_name", u.first_name);
-                cmd.Parameters.AddWithValue("@last_name", u.last_name);
-                cmd.Parameters.AddWithValue("@email", u.email);
-                cmd.Parameters.AddWithValue("@username", u.username);
-                cmd.Parameters.AddWithValue("@password", u.password);
-                cmd.Parameters.AddWithValue("@contact", u.contact);
-                cmd.Parameters.AddWithValue("@address", u.address);
-                cmd.Parameters.AddWithValue("@gender", u.gender);
-                cmd.Parameters.AddWithValue("@user_type", u.user_type);
-                cmd.Parameters.AddWithValue("@added_date", u.added_date);
-                cmd.Parameters.AddWithValue("@added_by", u.added_by);
-                cmd.Parameters.AddWithValue("@id", u.Id);
+                cmd.Parameters.AddWithValue("@title", c.title);
+                cmd.Parameters.AddWithValue("@description", c.description);
+                cmd.Parameters.AddWithValue("@added_date", c.added_date);
+                cmd.Parameters.AddWithValue("@added_by", c.added_by);
+                cmd.Parameters.AddWithValue("@id", c.Id);
 
                 conn.Open();
                 int rows = cmd.ExecuteNonQuery();
@@ -136,18 +118,17 @@ namespace Gestao_OT.DALdados
         }
         #endregion
 
-        //Eliminar no Banco de Dados
-        #region Deletar dados dO BD
-        public bool Delete(userBLL u)
+        #region Deletar categoria do BD
+        public bool Delete(categoriaBLL c)
         {
             bool isSuccess = false;
             SqlConnection conn = new SqlConnection(myconnstring);
             try
             {
-                string sql = "DELETE FROM tbl_user WHERE id=@id";
+                string sql = "DELETE FROM tbl_categories WHERE id=@id";
                 SqlCommand cmd = new SqlCommand(sql, conn);
 
-                cmd.Parameters.AddWithValue("@id", u.Id);
+                cmd.Parameters.AddWithValue("@id", c.Id);
 
                 conn.Open();
                 int rows = cmd.ExecuteNonQuery();
@@ -172,7 +153,7 @@ namespace Gestao_OT.DALdados
         }
         #endregion
 
-        #region Metodo de pesquisa
+        #region Metodo pesquisar categoria
         public DataTable Search(string keywords)
         {
             SqlConnection conn = new SqlConnection(myconnstring);
@@ -180,7 +161,7 @@ namespace Gestao_OT.DALdados
             try
             {
                 //Vai pesquisar por Id, nome, sobrenome e username
-                String sql = "SELECT * FROM tbl_user WHERE id LIKE '%" + keywords + "%' or first_name LIKE'%" + keywords + "%' or last_name LIKE '%" + keywords + "%' or username LIKE '%" + keywords + "%'";
+                String sql = "SELECT * FROM tbl_categories WHERE id LIKE '%" + keywords + "%'";
                 SqlCommand cmd = new SqlCommand(sql, conn);
                 SqlDataAdapter adapter = new SqlDataAdapter(cmd); //vai guradar os dados vindo da bd
                 conn.Open(); //Abrir conexao

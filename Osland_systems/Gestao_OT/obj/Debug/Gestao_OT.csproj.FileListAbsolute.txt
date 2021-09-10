@@ -43,3 +43,4 @@ I:\Git_v2\Sistema_OT\Osland_systems\Gestao_OT\obj\Debug\Gestao_OT.csproj.CoreCom
 I:\Git_v2\Sistema_OT\Osland_systems\Gestao_OT\obj\Debug\Gestao_OT.csproj.CopyComplete
 I:\Git_v2\Sistema_OT\Osland_systems\Gestao_OT\obj\Debug\Gestao_OT.exe
 I:\Git_v2\Sistema_OT\Osland_systems\Gestao_OT\obj\Debug\Gestao_OT.pdb
+I:\Git_v2\Sistema_OT\Osland_systems\Gestao_OT\obj\Debug\Gestao_OT.UIFormularios.frmCategorias.resources
